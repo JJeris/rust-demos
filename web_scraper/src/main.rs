@@ -217,8 +217,8 @@ fn main() {
     .unwrap();
     println!("{response}");
 
-    let document = scraper::Html::parse_document(&response);
-    println!("{:?}", document);
+    // let document = scraper::Html::parse_document(&response);
+    // println!("{:?}", document);
 }
 
 // fn main() {
