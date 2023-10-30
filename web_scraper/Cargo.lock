@@ -1421,6 +1421,8 @@ version = "0.1.0"
 dependencies = [
  "reqwest",
  "scraper",
+ "serde",
+ "serde_json",
 ]
 
 [[package]]
