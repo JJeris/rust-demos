@@ -1,2 +1,2 @@
-# rust-webscraping
-This is a learning repo, where I test web-scraping with Rust
+# rust-demos
+This is a learning repo, where I test small code demos with Rust 
