@@ -144,17 +144,21 @@ fn launch_blender(blender_launcher_path: &str, value_to_calculate: f64) {
 
     Notes: Need to make it async, although work pretty well as it is.
     *******************************************/
-    let python_script = format!(
-        r#"
+    let python_code: String = 
+    r#"
 import math
 def main(data):
-    input_value = {}
-    result = math.sqrt(input_value)
-    print(f'The square root of {{input_value}} is: {{result}}')
-    print(data)
-main(90)
+    print('CUUUUUUUUUUUUUUUUUUNT')
+    print(data)    
+    "#.to_string();
+
+    let python_script = format!(
+        r#"
+{}
+main("{}")
 "#,
-        value_to_calculate
+    python_code,
+    value_to_calculate
     );
 
 // print(f'The square root of ' + input_value +' is: '+ result)
@@ -177,7 +181,7 @@ main(90)
 
 fn main() {
     let value_to_calculate = 25.0; // You can change this to any desired value
-    launch_blender("C:\\blenderbaseapps\\daily\\blender-4.0.2-candidate+v40.175991df4faa-windows.amd64-release\\blender-launcher.exe", value_to_calculate);
+    launch_blender("C:\\blenderbaseapps\\stable\\blender-3.6.5-windows-x64\\blender-launcher.exe", value_to_calculate);
 }
 
 
