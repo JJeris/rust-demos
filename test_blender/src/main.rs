@@ -177,7 +177,7 @@ main(90)
 
 fn main() {
     let value_to_calculate = 25.0; // You can change this to any desired value
-    launch_blender("C:\\blenderbaseapps\\daily\\blender-4.1.0-alpha+main.0746435cdd89-windows.amd64-release\\blender-launcher.exe", value_to_calculate);
+    launch_blender("C:\\blenderbaseapps\\daily\\blender-4.0.2-candidate+v40.175991df4faa-windows.amd64-release\\blender-launcher.exe", value_to_calculate);
 }
 
 
