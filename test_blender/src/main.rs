@@ -132,6 +132,14 @@ use std::process::Command;
 //     }
 // }
 
+const python_code: &str = 
+    r#"
+import math
+def main(data):
+    print('CUUUUUUUUUUUUUUUUUUNT')
+    print(data)    
+    "#;
+
 // ?? THIS WOOOOOOOOOOOOOOOOOOOOOORKS
 fn launch_blender(blender_launcher_path: &str, value_to_calculate: f64) {
     /*******************************************
@@ -144,20 +152,14 @@ fn launch_blender(blender_launcher_path: &str, value_to_calculate: f64) {
 
     Notes: Need to make it async, although work pretty well as it is.
     *******************************************/
-    let python_code: String = 
-    r#"
-import math
-def main(data):
-    print('CUUUUUUUUUUUUUUUUUUNT')
-    print(data)    
-    "#.to_string();
+    
 
     let python_script = format!(
         r#"
 {}
 main("{}")
 "#,
-    python_code,
+    python_code.to_string(),
     value_to_calculate
     );
 
